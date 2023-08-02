@@ -1,13 +1,13 @@
-const subject = new Subject();
-const object = ["Ball", "Cat", "Dog", "Person", "Car"];
-const actions = ["said hello", "said bye", "said something", "said nothing"];
+// Define three arrays of data
+const subjects = ["You", "Your friend", "Your colleague"];
+const actions = ["will find success in", "should avoid", "will discover joy in"];
+const objects = ["work", "relationships", "a new hobby"];
 
-const messageGenerator = {
-    generateMessage: function() {
-        const randomSubject = object[Math.floor(Math.random() * object.length)];
-        const randomAction = actions[Math.floor(Math.random() * actions.length)];
-        const message = `${randomSubject} ${randomAction}`;
-        subject.notify(message);
-    }
-}
+// Generate random indices
+const randomSubject = Math.floor(Math.random() * subjects.length);
+const randomAction = Math.floor(Math.random() * actions.length);
+const randomObject = Math.floor(Math.random() * objects.length);
 
+// Construct and print the message
+const message = `${subjects[randomSubject]} ${actions[randomAction]} ${objects[randomObject]}.`;
+console.log(message);
